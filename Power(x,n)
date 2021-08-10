@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int x,n;
+void power(){
+    //Considering power of +ve values only
+    long long int ans=1;
+    while(n){
+        if(n%2){
+            ans=ans*x;
+            n--;
+        }
+        else{
+            x*=x;
+            n=n/2;
+        }
+    }
+    cout<<ans;
+}
+int main(){
+    int arr[10];
+    cin>>x>>n;
+    power();
+    return 0;
+}
