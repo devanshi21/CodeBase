@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+#define R 5
+#define C 4
+using namespace std;
+
+int main(){
+	int n = 5, m = 4;
+	int arr[][C] = {
+		{ 1, 2, 3, 4 },
+		{ 5, 6, 7, 8 },
+		{ 9, 10, 11, 12 },
+		{ 13, 14, 15, 16 },
+		{ 17, 18, 19, 20 },};
+        int target=34;
+        int l=0,r=(R*C)-1;
+        while(l<r){
+            int mid=(l+r)/2;
+            if(arr[mid/C][mid%C]==target){ 
+            //Using binary search over index's of the martix by assuming it as 1 array.
+            // why mid/C and why mid%C ,  as we are considering the matrix as an array and finding the index which is best possible near value or equal to target.
+                cout<<"Found";
+                return 0;
+            }
+            if(arr[mid/C][mid%C]<target){
+                l=mid+1;
+            }
+            else{
+                r=mid-1;
+            }
+        }
+        cout<<"Not found";
+	return 0;
+}
