@@ -1,0 +1,7 @@
+1) Given a n*m array like
+ 
+1 2 3 42
+4 5 6 45 
+7 8 9 70
+
+to find the index of 5 = no/col,no%col =(5/4,5%4) = (1,1)
